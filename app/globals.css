@@ -67,3 +67,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+.table th, .table td {
+  padding: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  text-align: left;
+  background-color: #f7fafc;
+  font-weight: bold;
+}
+
+.table td {
+  vertical-align: middle;
+}
