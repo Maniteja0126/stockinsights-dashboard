@@ -58,7 +58,7 @@ const AnnouncementTypeDropdown: React.FC<AnnouncementTypeDropdownProps> = ({ onF
                     type="checkbox"
                     checked={selectedTypes.includes(type)}
                     onChange={() => handleTypeChange(type)}
-                    className="mr-2"
+                    className="mr-2 rounded-md"
                   />
                   <span>{type}</span>
                 </div>

@@ -53,12 +53,10 @@ const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterCh
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
 
   useEffect(() => {
-    // Replace with your data fetching logic
     fetch('/data.json')
       .then((response) => response.json())
       .then((data: DataItem[]) => {
         setData(data);
-        // Optionally, you can initialize the selected filters here if needed
       });
   }, []);
 
@@ -73,7 +71,7 @@ const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterCh
   };
 
   return (
-    <div className="h-full border-r">
+    <div className="h-full w-50 border-r">
       <div className="flex leading-6 justify-between px-8 py-6">
         <p className="font-medium text-sm text-neutral-500">Filter by</p>
       </div>

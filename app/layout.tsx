@@ -18,9 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-w-screen min-h-screen ">
-          <AppBar/>
-          {children}</div>
+        <div className="min-w-screen min-h-screen">
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <AppBar />
+          </div>
+          <div className="pt-[72px]">{children}</div>
+        </div>
       </body>
     </html>
   );

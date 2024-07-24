@@ -34,27 +34,19 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <nav className="flex justify-center items-center space-x-2 mt-4">
-      <Button
-        variant="ghost"
-        onClick={handlePageChange(1)}
-        disabled={currentPage === 1}
-      >
-        &laquo;
-      </Button>
+    <nav className="mx-auto w-full mt-5 pr-14 flex gap-x-[1px] text-xs justify-end align-bottom">
       <Button
         variant="ghost"
         onClick={handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
       >
-        &lsaquo;
+        { currentPage ===1 ? "" : <>&lsaquo;</>}
       </Button>
       {startPage > 1 && (
         <>
           <Button variant="ghost" onClick={handlePageChange(1)}>
             1
           </Button>
-          {startPage > 2 && <span className="mx-1">...</span>}
         </>
       )}
       {Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index).map(page => (
@@ -66,27 +58,12 @@ const Pagination: React.FC<PaginationProps> = ({
           {page}
         </Button>
       ))}
-      {endPage < totalPages && (
-        <>
-          {endPage < totalPages - 1 && <span className="mx-1">...</span>}
-          <Button variant="ghost" onClick={handlePageChange(totalPages)}>
-            {totalPages}
-          </Button>
-        </>
-      )}
       <Button
         variant="ghost"
         onClick={handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
       >
         &rsaquo;
-      </Button>
-      <Button
-        variant="ghost"
-        onClick={handlePageChange(totalPages)}
-        disabled={currentPage === totalPages}
-      >
-        &raquo;
       </Button>
     </nav>
   );

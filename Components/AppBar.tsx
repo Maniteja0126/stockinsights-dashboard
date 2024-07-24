@@ -4,9 +4,10 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
 
 export const AppBar = () => {
   return (
-    <div className="flex p-3 justify-between m-2 border-b border-slate-300">
-      <div className="flex flex-col justify-center p-1 rounded-md">
-        <Icon />
+    <div className="fixed top-0 left-0 right-0 z-50 flex p-3 justify-between m-2 border-b border-slate-300 bg-white">
+      <div className="flex justify-center p-1 rounded-md">
+       <div className="flex"><Icon/></div>
+       <span className="pl-2 text-neutral-500 text-md min-w-[128px]">StockInsights</span>
       </div>
       <div>
         <Input type="search" placeholder="Search" />

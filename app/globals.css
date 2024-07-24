@@ -82,3 +82,39 @@
 .table td {
   vertical-align: middle;
 }
+
+
+.dataTableWrapper {
+  height: calc(100vh - 4rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dataTableWrapper::-webkit-scrollbar {
+  display: none; 
+}
+
+.dataTableWrapper {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+
+html::-webkit-scrollbar {
+  width: 6px; 
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+html {
+  -ms-overflow-style: none;  
+  scrollbar-width: thin;   
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; 
+}

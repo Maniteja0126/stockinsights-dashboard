@@ -14,9 +14,9 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const baseStyles = "py-2 px-4 rounded-md text-sm font-medium";
   const variantStyles = {
-    default: "bg-blue-500 text-white hover:bg-blue-600",
-    outline: "border border-blue-500 text-blue-500 hover:bg-blue-100",
-    ghost: "bg-transparent text-blue-500 hover:bg-blue-100",
+    default: "bg-slate-500 text-white hover:bg-slate-600",
+    outline: "border border-slate-500 text-neutral-500 hover:bg-slate-100",
+    ghost: "bg-transparent text-slate-500 hover:bg-slate-100",
   };
 
   return (
