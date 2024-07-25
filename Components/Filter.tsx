@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SentimentDropdown from "./Sentiment";
 import AnnouncementTypeDropdown from "./Announcements";
 
@@ -45,20 +45,12 @@ const announcementTypes = [
 interface FilterProps {
   onSentimentFilterChange: (selectedSentiments: string[]) => void;
   onTypeFilterChange: (selectedTypes: string[]) => void;
+  data: DataItem[];
 }
 
-const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterChange }) => {
-  const [data, setData] = useState<DataItem[]>([]);
+const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterChange  ,data}) => {
   const [selectedSentiments, setSelectedSentiments] = useState<string[]>([]);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
-
-  useEffect(() => {
-    fetch('/data.json')
-      .then((response) => response.json())
-      .then((data: DataItem[]) => {
-        setData(data);
-      });
-  }, []);
 
   const handleSentimentFilterChange = (selectedSentiments: string[]) => {
     setSelectedSentiments(selectedSentiments);

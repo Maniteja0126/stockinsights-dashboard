@@ -13,23 +13,6 @@ type Announcement = {
 };
 
 const DashboardPage: React.FC = () => {
-  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
-  const [filteredAnnouncements, setFilteredAnnouncements] = useState<Announcement[]>([]);
-
-  useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
-      .then(data => {
-        if (Array.isArray(data)) {
-          setAnnouncements(data);
-          setFilteredAnnouncements(data);
-        } else {
-          console.error('Unexpected data format:', data);
-        }
-      })
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
-
   return (
     <div className="flex">
       <div className="flex-1">

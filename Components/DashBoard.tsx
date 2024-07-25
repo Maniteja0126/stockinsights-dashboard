@@ -6,6 +6,7 @@ import DataTable from "./DataTable";
 import Pagination from "./Pagination";
 
 type Announcement = {
+  _id: { $oid: string };
   company_name: string;
   sub_type: string;
   summary: string;
@@ -13,6 +14,12 @@ type Announcement = {
   source_url: string;
   published_time: { $date: string };
 };
+interface DataItem {
+  _id: { $oid: string };
+  sentiment: string;
+  sub_type: string;
+  summary: string;
+}
 
 const AnnouncementDashboard: React.FC = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
@@ -21,6 +28,7 @@ const AnnouncementDashboard: React.FC = () => {
   >([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [announcementsPerPage] = useState(10);
+  const [data, setData] = useState<DataItem[]>([]);
 
   useEffect(() => {
     fetch("/data.json")
@@ -29,6 +37,7 @@ const AnnouncementDashboard: React.FC = () => {
         if (Array.isArray(data)) {
           setAnnouncements(data);
           setFilteredAnnouncements(data);
+          setData(data);
         } else {
           console.error("Unexpected data format:", data);
         }
@@ -78,6 +87,7 @@ const AnnouncementDashboard: React.FC = () => {
           <Filter
             onSentimentFilterChange={handleSentimentFilterChange}
             onTypeFilterChange={handleTypeFilterChange}
+            data={data}
           />
         </div>
         <div className=" ml-4 flex flex-col overflow-hidden">
