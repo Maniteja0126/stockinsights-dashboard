@@ -18,7 +18,7 @@ const DashboardNavBar = () => {
               >
                 <path
                   stroke="#B04425"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   d="m6.005 13.105 1.127-2.403a1.25 1.25 0 0 1 .618-.608L10.175 9 7.75 7.907a1.25 1.25 0 0 1-.618-.608L6.005 4.896 4.9 7.292a1.25 1.25 0 0 1-.625.617L1.835 9l2.44 1.091m1.73 3.013-1.73-3.013m1.73 3.013L4.9 10.71a1.25 1.25 0 0 0-.625-.617m1.73 3.013-1.73-3.013m1.502 3.5Z"
                 ></path>
                 <path
@@ -35,7 +35,6 @@ const DashboardNavBar = () => {
             <div
               role="menubar"
               className="flex h-10 items-center space-x-1 rounded-md border bg-background border-none p-0 w-fit"
-              tabindex-0
               data-orientation="horizontal"
               style={{ outline: "none" }}
             >
@@ -46,7 +45,6 @@ const DashboardNavBar = () => {
                 aria-expanded="false"
                 data-state="closed"
                 className="flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
-                tabIndex-1
                 data-orientation="horizontal"
                 data-radix-collection-item=""
               >
@@ -94,9 +92,9 @@ const DashboardNavBar = () => {
               >
                 <path
                   fill="currentColor"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M5 4.636c0-.876.242-1.53.643-1.962.396-.427 1.003-.696 1.858-.696s1.462.269 1.857.694c.4.431.642 1.085.642 1.961V6H5zM4 6V4.636c0-1.055.293-1.978.91-2.643.623-.67 1.517-1.015 2.591-1.015s1.969.344 2.59 1.014c.617.664.909 1.587.909 2.641V6h1a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zM3 7h9v6H3z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <span className="text-xs whitespace-nowrap font-medium leading-6 text-neutral-400">
@@ -113,8 +111,8 @@ const DashboardNavBar = () => {
             >
               <path
                 stroke="#16A34A"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M3.05 10.95a7 7 0 0 1 0-9.9m9.9 0a7 7 0 0 1 0 9.9m-7.7-2.2a3.89 3.89 0 0 1 0-5.5m5.5 0a3.89 3.89 0 0 1 0 5.5M8.778 6a.778.778 0 1 1-1.556 0 .778.778 0 0 1 1.556 0"
               ></path>
             </svg>

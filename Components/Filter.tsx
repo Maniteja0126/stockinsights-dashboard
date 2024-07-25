@@ -93,7 +93,6 @@ const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterCh
             placeholder="Type to search"
             className="bg-transparent border-none w-full placeholder:font-light placeholder:text-zinc-400 placeholder:text-xs focus:outline-none text-xs cursor-text"
             type="text"
-            value=""
           />
           <button className="p-2 invisible">
             <svg
