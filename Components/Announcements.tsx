@@ -51,7 +51,7 @@ const AnnouncementTypeDropdown: React.FC<AnnouncementTypeDropdownProps> = ({ onF
               {announcementTypes.map((type, index) => (
                 <div
                   key={index}
-                  className="flex flex-row items-start  text-xs text-neutral-400 py-2 pl-8 pr-5"
+                  className="flex flex-row items-start  text-xs text-neutral-400 py-2 pl-8 pr-5 cursor-pointer"
                   onClick={() => handleTypeChange(type)}
                 >
                   <input

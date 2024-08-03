@@ -45,12 +45,12 @@ const AnnouncementDashboard: React.FC = () => {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  const handleSentimentFilterChange = (selectedSentiments: string[]) => {
-    filterData(selectedSentiments, []);
+  const handleSentimentFilterChange = (selectedSentiments: string[] , selectedTypes: string[]) => {
+    filterData(selectedSentiments, selectedTypes);
   };
 
-  const handleTypeFilterChange = (selectedTypes: string[]) => {
-    filterData([], selectedTypes);
+  const handleTypeFilterChange = (selectedTypes: string[] , selectedSentiments: string[]) => {
+    filterData(selectedSentiments, selectedTypes);
   };
 
   const filterData = (sentiments: string[], types: string[]) => {

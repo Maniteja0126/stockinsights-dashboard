@@ -43,8 +43,8 @@ const announcementTypes = [
 ];
 
 interface FilterProps {
-  onSentimentFilterChange: (selectedSentiments: string[]) => void;
-  onTypeFilterChange: (selectedTypes: string[]) => void;
+  onSentimentFilterChange: (selectedSentiments: string[] , selectedTypes : string[]) => void;
+  onTypeFilterChange: (selectedTypes: string[] , selectedSentiments : string[]) => void;
   data: DataItem[];
 }
 
@@ -54,12 +54,12 @@ const Filter: React.FC<FilterProps> = ({ onSentimentFilterChange, onTypeFilterCh
 
   const handleSentimentFilterChange = (selectedSentiments: string[]) => {
     setSelectedSentiments(selectedSentiments);
-    onSentimentFilterChange(selectedSentiments);
+    onSentimentFilterChange(selectedSentiments , selectedTypes);
   };
 
   const handleTypeFilterChange = (selectedTypes: string[]) => {
     setSelectedTypes(selectedTypes);
-    onTypeFilterChange(selectedTypes);
+    onTypeFilterChange(selectedTypes , selectedSentiments);
   };
 
   return (
